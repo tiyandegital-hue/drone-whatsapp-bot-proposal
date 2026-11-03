@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How It Works — WhatsApp Quotation Bot | Tiyan Digital</title>
+<meta name="description" content="The architecture: WhatsApp Business API, conversation layer, Drive template engine, sequential invoice numbering, Sheets ledger, repeat-client quote learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Tiyan <span>Digital</span></a>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="demo.html">Live demo</a>
+      <a href="how-it-works.html" class="active">How it works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn small" href="contact.html">Start scoping</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section style="padding-bottom:48px">
+  <div class="wrap">
+    <p class="eyebrow rise">Architecture</p>
+    <h1 class="rise" style="font-size:clamp(36px,5vw,60px);margin:16px 0">Six parts.<br>Zero re-typing.</h1>
+    <p class="lede rise">Every message, number, and total has exactly one place it lives. Here's the whole system, end to end.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="flow">
+      <div class="fnode rise">
+        <div class="n">1</div>
+        <div><h3>WhatsApp Business API</h3><p>The front door. Clients message your existing business number; every message arrives via official API webhooks. Template messages for proactive follow-ups, approved by Meta.</p></div>
+      </div>
+      <div class="farrow rise" aria-hidden="true">↓</div>
+      <div class="fnode rise">
+        <div class="n">2</div>
+        <div><h3>Conversation layer</h3><p>Understands free-text answers ("six hours, thermal too") and falls back to quick-tap buttons. Anything ambiguous goes to you — the bot never guesses a price.</p></div>
+      </div>
+      <div class="farrow rise" aria-hidden="true">↓</div>
+      <div class="fnode rise">
+        <div class="n">3</div>
+        <div><h3>Drive template engine</h3><p>Pulls the right client template from Google Drive and fills it: name, hours, line items, terms. Your templates stay the source of truth — edit a doc, the bot follows.</p></div>
+      </div>
+      <div class="farrow rise" aria-hidden="true">↓</div>
+      <div class="fnode acc rise">
+        <div class="n">4</div>
+        <div><h3>Quoting engine — computed, not guessed</h3><p>Flight hours × your rate card, extras added, invoice number sequenced from a counter that can't repeat. Arithmetic is deterministic; AI never touches the math.</p></div>
+      </div>
+      <div class="farrow rise" aria-hidden="true">↓</div>
+      <div class="fnode rise">
+        <div class="n">5</div>
+        <div><h3>Sheets ledger</h3><p>Every confirmed invoice appends one row: number, client, hours, total, timestamp. Your books update the second you tap confirm — no night-time re-typing.</p></div>
+      </div>
+      <div class="farrow rise" aria-hidden="true">↓</div>
+      <div class="fnode rise">
+        <div class="n">6</div>
+        <div><h3>Repeat-client learning</h3><p>Each finished job is logged against the client. Next quote starts from their real history — average rate, usual extras — so returning clients get sharper quotes automatically.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow rise">Design decisions</p>
+    <h2 class="rise">Boring where it matters.</h2>
+    <div class="steps" style="margin-top:32px">
+      <div class="step rise"><h3>AI talks, math computes</h3><p>The language model handles conversation. Prices, invoice numbers, and totals run through strict code paths. A wrong total is a lost client — so totals can't be wrong.</p></div>
+      <div class="step rise"><h3>Your tools stay yours</h3><p>Drive and Sheets remain the system of record. The bot reads and writes them; it never replaces them. If the bot ever goes down, your data is untouched.</p></div>
+      <div class="step rise"><h3>Human in the loop</h3><p>Every quote waits for your tap before it sends. Full auto-send is possible later — we start with you in control.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="honest rise">
+      <span class="dot"></span>
+      <p><strong>What this page is.</strong> A proposal architecture — how we'd build it, in plain terms. Timelines and final scope get fixed in the scoping call, against your actual rate card and templates.</p>
+    </div>
+    <div class="rise" style="margin-top:40px;display:flex;gap:16px;flex-wrap:wrap">
+      <a class="btn" href="demo.html">Try the demo again</a>
+      <a class="btn ghost" href="pricing.html">See pricing</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Tiyan Digital</h4>
+        <p style="font-size:15px;color:var(--muted);max-width:32ch">Websites, AI agents and workflow automation for businesses that want the busywork gone.</p>
+      </div>
+      <div>
+        <h4>Proposal</h4>
+        <a href="demo.html">Live demo</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Tiyan Digital — concept proposal. Simulated demo; no real messages sent.</span>
+      <span>tiyandegital.com</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

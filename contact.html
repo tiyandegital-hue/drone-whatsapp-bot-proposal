@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact — WhatsApp Quotation Bot | Tiyan Digital</title>
+<meta name="description" content="Start the scoping conversation for your WhatsApp quotation bot. Tell us about your rate card and templates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Tiyan <span>Digital</span></a>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="demo.html">Live demo</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a class="btn small" href="contact.html">Start scoping</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section style="padding-bottom:48px">
+  <div class="wrap">
+    <p class="eyebrow rise">Contact</p>
+    <h1 class="rise" style="font-size:clamp(36px,5vw,60px);margin:16px 0">Tell us about<br>your rate card.</h1>
+    <p class="lede rise">One scoping call is all it takes to turn this concept into a fixed written quote. This form is a demo — it doesn't send anywhere yet.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <form class="contact rise" id="contact-form" novalidate>
+      <div class="field">
+        <label for="f-name">Your name <span class="req">*</span></label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+        <p class="err" id="e-name">Please enter your name.</p>
+      </div>
+      <div class="field">
+        <label for="f-email">Work email <span class="req">*</span></label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+        <p class="err" id="e-email">Please enter a valid email address.</p>
+      </div>
+      <div class="field">
+        <label for="f-detail">What does a typical job look like?</label>
+        <textarea id="f-detail" name="message" rows="5" placeholder="e.g. Mostly real-estate surveys, 2–6 flight hours, I use Google Docs templates today…"></textarea>
+        <p class="hint">The more concrete, the sharper our scoping call.</p>
+      </div>
+      <div class="consent">
+        <input id="f-consent" type="checkbox" required>
+        <p><label for="f-consent" style="font-weight:600;color:var(--ink)">I agree to be contacted about this proposal.</label><br>
+        We'll use your details only to reply to this inquiry — nothing else, no list, no sharing. See our <a href="privacy.html" style="color:var(--accent)">privacy policy</a>.</p>
+      </div>
+      <p class="err" id="e-consent">Please tick the consent box so we can reply.</p>
+      <button class="btn" type="submit">Send inquiry</button>
+      <p class="hint" id="form-note" style="margin-top:16px"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Tiyan Digital</h4>
+        <p style="font-size:15px;color:var(--muted);max-width:32ch">Websites, AI agents and workflow automation for businesses that want the busywork gone.</p>
+      </div>
+      <div>
+        <h4>Proposal</h4>
+        <a href="demo.html">Live demo</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Tiyan Digital — concept proposal. Simulated demo; no real messages sent.</span>
+      <span>tiyandegital.com</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script>
+(function(){
+  var form=document.getElementById('contact-form');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ok=true;
+    var name=document.getElementById('f-name'),email=document.getElementById('f-email'),consent=document.getElementById('f-consent');
+    function set(id,bad){document.getElementById(id).style.display=bad?'block':'none'}
+    set('e-name',!name.value.trim()); if(!name.value.trim())ok=false;
+    var em=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+    set('e-email',!em); if(!em)ok=false;
+    set('e-consent',!consent.checked); if(!consent.checked)ok=false;
+    var note=document.getElementById('form-note');
+    if(ok){
+      note.textContent='Thanks — in the live version this would reach us directly. For now, reply to our Reddit message and we\u2019ll take it from there.';
+      note.style.color='var(--accent)'; form.reset();
+    }else{
+      note.textContent='Please fix the highlighted fields.'; note.style.color='#B0563F';
+    }
+  });
+})();
+</script>
+</body>
+</html>

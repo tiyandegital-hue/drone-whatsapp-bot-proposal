@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live Demo — WhatsApp Quotation Bot | Tiyan Digital</title>
+<meta name="description" content="Interactive simulated demo: build a drone-service quotation inside a WhatsApp-style chat — client, flight hours, extras, numbered invoice, Sheets ledger.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Tiyan <span>Digital</span></a>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="demo.html" class="active">Live demo</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn small" href="contact.html">Start scoping</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section style="padding-bottom:48px">
+  <div class="wrap">
+    <p class="eyebrow rise">Interactive concept demo</p>
+    <h1 class="rise" style="font-size:clamp(36px,5vw,60px);margin:16px 0">Run a quote.<br>Right here.</h1>
+    <p class="lede rise">This is the exact flow from your post — client, flight hours, extras, numbered invoice, Sheets ledger. Tap through it. Nothing here sends real messages.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap demo-grid">
+    <div class="demo-side rise">
+      <div class="phone" role="region" aria-label="Interactive simulated WhatsApp demo">
+        <div class="phone-screen">
+          <div class="wa-head">
+            <div class="wa-avatar">Q</div>
+            <div><div class="wa-name">QuoteBot</div><div class="wa-status">online</div></div>
+          </div>
+          <div class="wa-body" id="demo-chat" aria-live="polite"></div>
+          <div id="demo-tray" style="padding:10px 12px;z-index:2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="demo-notes">
+      <div class="note rise">
+        <h4>What you're seeing</h4>
+        <p>A scripted simulation of the bot's conversation flow — the same steps the real build would run against the WhatsApp Business API, your Drive templates, and your Sheets ledger.</p>
+      </div>
+      <div class="note rise">
+        <h4>Try the repeat client</h4>
+        <p>Pick SkyView Realty and watch the bot price from their history — that's the "improves quotes over time" requirement from your post, working.</p>
+      </div>
+      <div class="note rise">
+        <h4>Deterministic, not clever</h4>
+        <p>Invoice numbers, rates, and totals are computed, not guessed. The AI handles conversation; arithmetic stays exact. That's the architecture we'd ship.</p>
+      </div>
+      <div class="note rise">
+        <h4>Demo values</h4>
+        <p>Rates ($300/hr), clients, and invoice numbers are placeholders. Your real rate card, templates, and numbering plug in at build time.</p>
+      </div>
+      <div class="demo-bar rise">
+        <a class="btn" href="how-it-works.html">See the architecture</a>
+        <a class="btn ghost" href="contact.html">Scope this build</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Tiyan Digital</h4>
+        <p style="font-size:15px;color:var(--muted);max-width:32ch">Websites, AI agents and workflow automation for businesses that want the busywork gone.</p>
+      </div>
+      <div>
+        <h4>Proposal</h4>
+        <a href="demo.html">Live demo</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Tiyan Digital — concept proposal. Simulated demo; no real messages sent.</span>
+      <span>tiyandegital.com</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/demo.js"></script>
+</body>
+</html>
